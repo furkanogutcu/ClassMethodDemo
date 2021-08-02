@@ -6,7 +6,18 @@ namespace ClassMethodDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Customer customer1 = new Customer()
+            {
+                ID = 1,
+                FirstName = "Furkan",
+                LastName = "Ogutcu",
+            };
+
+            CustomerManager customerManager = new CustomerManager();
+            Console.WriteLine(customerManager.FullName(customer1));
+            customerManager.Add(customer1);
+            customerManager.Update(customer1);
+            customerManager.Delete(customer1);           
         }
     }
 }
